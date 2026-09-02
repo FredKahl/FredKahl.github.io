@@ -7,6 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .section-nav { text-align:center; margin:14px 0 4px; line-height:1.8; }
+    .section-nav a { white-space:nowrap; }
+    .research-grid {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin:18px 0;
+    }
+    .research-card {
+      border:1px solid #e2e2e2;
+      border-radius:8px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .research-card video {
+      display:block;
+      width:100%;
+      aspect-ratio:16 / 9;
+      object-fit:cover;
+      background:#f2f2f2;
+    }
+    .research-card-content { padding:12px; }
+    .research-card-title { font-weight:700; line-height:1.35; }
+    .research-card-meta { margin-top:6px; color:#555; line-height:1.4; }
+    details summary { cursor:pointer; color:#1772d0; }
+    @media (max-width:650px) {
+      .research-grid { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 
 <body>
@@ -25,14 +56,9 @@ I am a professor at <a href="https://www.chalmers.se/">Chalmers University of Te
 My research focuses on geometric deep learning and 3D scene understanding, with core problems in 3D reconstruction, correspondences and visual localization with an emphasis on symmetry, equivariance and scalable learning.
 Current interests include generative models and applications in medical image analysis.
 </p>
-<p>
-<b>Highlights:</b></p>		
-<ul>
-  <li>David Marr Prize (ICCV)</li>
-  <li>Professor and Head of Computer Vision Group, Chalmers</li>
-	  <li>Geometric deep learning, 3D scene understanding and visual localization</li>
-  <li>Co-founder of Eigenvision, Taigatech and Cognimatics</li>
-</ul>
+
+<p><b>Professor of Computer Vision at Chalmers · Hi! PARIS Visiting Chair · David Marr Prize · Co-founder of three computer-vision companies</b></p>
+
 			<p>
 Previously, I was a professor at Lund University (2006–2018) and a postdoctoral fellow at UC San Diego and the Australian National University. I received my PhD in mathematics from Lund University (1997–2001).
 </p>
@@ -43,6 +69,13 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
                 <a href="https://www.linkedin.com/in/fredrik-kahl-6526b2140/">LinkedIn</a> &nbsp/&nbsp
                 <a href="https://www.chalmers.se/en/persons/kahlf/">My homepage at Chalmers</a>
               </p>
+              <nav class="section-nav" aria-label="Main sections">
+                <a href="#research">Research</a> &nbsp;·&nbsp;
+                <a href="#publications">Publications</a> &nbsp;·&nbsp;
+                <a href="#students">Students</a> &nbsp;·&nbsp;
+                <a href="#awards">Awards</a> &nbsp;·&nbsp;
+                <a href="#entrepreneurship">Entrepreneurship</a>
+              </nav>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
               <a href="kahlf.webp"><img style="width:100%;max-width:100%" src="kahlf.webp" class="hoverZoomLink"></a>
@@ -54,206 +87,137 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>News</heading>
-              <p>
               <ul>
-<li>
-	 Our paper <a href="https://research.zenseact.com/publications/paragram/" target="_blank" rel="external nofollow noopener">Scalable GPU Construction of 3D Voronoi and Power Diagrams</a> has been accepted to <a href="https://s2026.siggraph.org/" target="_blank" rel="external nofollow noopener">SIGGRAPH 2026</a>!
-</li>
-<li>
-<b>RoMa v2</b>, new state-of-the-art in <i>dense</i> image matching and currently the world’s best dense matcher, accepted to <a href="https://eccv.ecva.net/">ECCV 2026</a> in Malmö.
-  Read the <a href="https://arxiv.org/abs/2511.15706">paper</a>. We also won the <b>Best Industry Paper</b> at the Swedish Symposium on Image Analysis, Örebro, 2026 for our work on dense matching.
-</li>
-<li>
-<b>LoMa</b>, new state-of-the-art in <i>sparse</i> image matching and currently the world’s best <i>sparse</i> matcher, accepted to <a href="https://eccv.ecva.net/">ECCV 2026</a> in Malmö.
-  Explore the <a href="https://github.com/davnords/LoMa">project</a> or read the <a href="https://arxiv.org/abs/2604.04931">paper</a>.
-</li>
-				  
-<li>
-  <b>MuM</b>: Multi-view masked image modeling for 3D vision. A simple self-supervised approach for learning geometric features. Presented at <a href="https://cvpr.thecvf.com/">CVPR 2026</a>. Find out more about the research. Read the <a href="https://arxiv.org/abs/2511.17309">paper</a> or see <a href="https://github.com/davnords/mum">project page</a>.
-</li>
-<li>
-  Reweighting can dramatically simplify geometric vision problems: for two-view triangulation, degree six drops to degree two. Presented at <a href="https://3dvconf.github.io/">3DV 2026</a>. <a href="https://arxiv.org/abs/2503.08142">Paper</a>. Joint work with Felix Rydell, Kathlén Kohn, Dept of Mathematics, KTH.
-</li>
-<li>
-  <b>Semi-Supervised Hierarchical Open-Set Classification</b>: hierarchical recognition in the presence of unknown classes. Presented at <a href="https://wacv.thecvf.com/">WACV 2026</a>. <a href="https://arxiv.org/abs/2601.16541">Paper</a>.
-</li>				  
-  <li> I gave two keynote talks in October 2025: The ICCV Workshop <a href="https://sites.google.com/view/calipose2025/home">CALIPOSE</a> in Honolulu and the <b>French-Swedish AI Workshop</b> at KTH.</li>
-  <li>
-	  Spherical camera motion makes standard SfM pipelines fail. <a href="https://jonathanventura.github.io/spherical-sfm/">Find out why and how to fix it</a>. Presented as an oral at <a href="https://iccv.thecvf.com/">ICCV 2025</a>.</li>
-		      
-  <li>At large scale, insisting that networks rediscover known symmetries isn’t just inefficient — it’s a curious form of self-imposed ignorance! Our latest <a href="https://arxiv.org/abs/2505.15441">work on Quick ViTs</a> will be presented at <a href="https://eccv.ecva.net/">ECCV 2026</a>. </li>
-  
-  <li><b>R3D2</b> blends 3D assets seamlessly into neural driving scenes using diffusion, unlocking scalable and realistic AD simulation. Explore the <a href="https://research.zenseact.com/publications/R3D2/">project</a> or read the <a href="https://arxiv.org/abs/2506.07826">paper</a>. Collaboration with Zenseact, UC Berkeley and Linköping University. </li>
- 
-  <li>Serving as Area Chair for <a href="https://eccv.ecva.net/">ECCV 2026</a> in Malmö, <a href="https://neurips.cc/">NeurIPS 2026</a> in Sydney, <a href="https://iccv.thecvf.com/">ICCV 2025</a> in Honolulu, and <a href="https://cvpr.thecvf.com/">CVPR 2025</a> in Nashville.</li>
-
+                <li><b>Aug 2026.</b> <b>VoroTracing</b>, our differentiable Voronoi ray tracer for novel-view synthesis, is out as a preprint with <a href="https://research.zenseact.com/publications/vorotracing/">project page</a>, <a href="https://arxiv.org/abs/2608.17682">paper</a>, and <a href="https://github.com/zenseact/VoroTracing">code</a>.</li>
+                <li><b>May 2026.</b> <a href="https://research.zenseact.com/publications/paragram/">Scalable GPU Construction of 3D Voronoi and Power Diagrams</a> was accepted to <a href="https://s2026.siggraph.org/">SIGGRAPH 2026</a>.</li>
+                <li><b>Apr 2026.</b> <b>LoMa</b> sets a new state of the art in sparse local feature matching and was accepted to <a href="https://eccv.ecva.net/">ECCV 2026</a>. See the <a href="https://github.com/davnords/LoMa">project</a> and <a href="https://arxiv.org/abs/2604.04931">paper</a>.</li>
+                <li><b>Nov 2025.</b> <b>MuM</b> extends masked image modeling to arbitrarily many views for learning features tailored to 3D vision. Presented at <a href="https://cvpr.thecvf.com/">CVPR 2026</a>. See the <a href="https://github.com/davnords/mum">project</a> and <a href="https://arxiv.org/abs/2511.17309">paper</a>.</li>
+                <li><b>Nov 2025.</b> <b>RoMa v2</b> sets a new state of the art in dense image matching and was accepted to <a href="https://eccv.ecva.net/">ECCV 2026</a>. Read the <a href="https://arxiv.org/abs/2511.15706">paper</a>.</li>
               </ul>
-              </p>
+              <details>
+                <summary>Earlier news</summary>
+                <ul>
+                  <li><b>2026.</b> <a href="https://arxiv.org/abs/2505.15441">Quick ViTs</a>, which speed up vision transformers through equivariance, was accepted to ECCV 2026.</li>
+                  <li><b>2026.</b> <a href="https://research.zenseact.com/publications/R3D2/">R3D2</a> was presented at the CVPR Workshop on Autonomous Driving.</li>
+                  <li><b>2026.</b> Reweighting reduces two-view triangulation from degree six to degree two. Presented at 3DV 2026. <a href="https://arxiv.org/abs/2503.08142">Paper</a>.</li>
+                  <li><b>2026.</b> <a href="https://arxiv.org/abs/2601.16541">Semi-Supervised Hierarchical Open-Set Classification</a> was presented at WACV 2026.</li>
+                  <li><b>Oct 2025.</b> I gave keynote talks at the ICCV <a href="https://sites.google.com/view/calipose2025/home">CALIPOSE Workshop</a> and the French-Swedish AI Workshop at KTH.</li>
+                  <li><b>2025.</b> Our work on <a href="https://jonathanventura.github.io/spherical-sfm/">spherical structure from motion</a> was presented as an oral at ICCV 2025.</li>
+                </ul>
+              </details>
             </td>
           </tr>
         </tbody></table>
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Entrepreneurial achievements</heading>
-      <p>
+    <td id="research" style="padding:20px;width:100%;vertical-align:middle">
+      <heading>Selected research and projects</heading>
+      <p>Recent work with my PhD student <a href="https://bertaveira.github.io/">Bernardo Taveira</a> and collaborators:</p>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <a href="https://research.zenseact.com/publications/vorotracing/">
+            <video poster="https://bertaveira.github.io/media/vorotracing.avif" autoplay muted loop playsinline aria-label="VoroTracing preview">
+              <source src="https://bertaveira.github.io/media/vorotracing.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="research-card-content">
+            <a class="research-card-title" href="https://research.zenseact.com/publications/vorotracing/">Differentiable Voronoi Ray Tracing Beyond Rasterization Speeds</a>
+            <div class="research-card-meta">VoroTracing · arXiv preprint, 2026</div>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <a href="https://research.zenseact.com/publications/paragram/">
+            <video poster="https://bertaveira.github.io/media/paragram.avif" autoplay muted loop playsinline aria-label="ParaGram preview">
+              <source src="https://bertaveira.github.io/media/paragram.webm" type="video/webm">
+              <source src="https://bertaveira.github.io/media/paragram.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="research-card-content">
+            <a class="research-card-title" href="https://research.zenseact.com/publications/paragram/">Scalable GPU Construction of 3D Voronoi and Power Diagrams</a>
+            <div class="research-card-meta">ParaGram · SIGGRAPH 2026</div>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <a href="https://research.zenseact.com/publications/R3D2/">
+            <video poster="https://bertaveira.github.io/media/r3d2.avif" autoplay muted loop playsinline aria-label="R3D2 preview">
+              <source src="https://bertaveira.github.io/media/r3d2.webm" type="video/webm">
+              <source src="https://bertaveira.github.io/media/r3d2.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="research-card-content">
+            <a class="research-card-title" href="https://research.zenseact.com/publications/R3D2/">R3D2: Realistic 3D Asset Insertion via Diffusion</a>
+            <div class="research-card-meta">CVPR Workshop on Autonomous Driving, 2026</div>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <a href="https://gem-nr.github.io/">
+            <video autoplay muted loop playsinline controls aria-label="GeM-NR preview">
+              <source src="https://gem-nr.github.io/static/video/Video.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="research-card-content">
+            <a class="research-card-title" href="https://gem-nr.github.io/">GeM-NR: Geometry-Aware Multi-View Editing for Nonrigid Scene Changes</a>
+            <div class="research-card-meta">Multi-view consistent 3D scene editing, 2026</div>
+          </div>
+        </article>
+      </div>
+
       <ul>
-        <li> I am co-founder and board member of the computer vision consultancy <a href="https://www.eigenvision.se/">Eigenvision AB</a>. Turnover (2025): 14 MSEK. </li>
-        <li> I am co-founder and board member of the AI start-up <a href="https://taigatech.se/">Taigatech AB</a>. Turnover (2025): 23 MSEK. </li>
-        <li> Co-founder of <b>Cognimatics AB</b> (2003), acquired by <b>Axis Communications</b> in 2016. </li>
-        <li> Patent inventor and senior advisor to <b>Polar Rose AB</b>, acquired by <b>Apple</b> in 2010. </li>
-        <li> Patent inventor with <b>Zenseact</b> on 3D object detection, 2019. </li>
-        <li> Research collaborator to <b>Mapillary AB</b>, the crowd-sourced street-view platform founded by my former PhD students Jan-Erik Solem and Yubin Kuang, acquired by <b>Meta</b> in 2020. </li>
+        <li><b>What would be Hilbert’s problems of AI?</b> We propose an initiative to identify fundamental scientific questions that could help structure AI. Read and comment on the white paper at <a href="https://openreview.net/forum?id=j9qvqDNQc0">OpenReview</a>.</li>
+        <li>I am the main PI for the WASP-NEST project <a href="https://neural3d.github.io/">3D Scene Perception, Embeddings and Neural Rendering</a>, with co-PIs Kathlén Kohn and Mårten Björkman at KTH.</li>
+        <li>We run the <a href="https://visuallocalization.net/">Visual Localization benchmark</a> for evaluating image-based localization algorithms.</li>
       </ul>
-      </p>
+
+      <details>
+        <summary>Earlier projects and academic links</summary>
+        <ul>
+          <li>My <a href="http://genealogy.math.ndsu.nodak.edu/id.php?id=58941">academic genealogy</a> and Erdős number 4: Fredrik Kahl – Gunnar Sparr – Jaak Peetre – Svante Janson – Paul Erdős.</li>
+          <li><a href="http://www.maths.lth.se/vision/research/globalvision.php">GlobalVision</a>, my ERC Starting Grant project, 2008–2013.</li>
+          <li><a href="http://www.maths.lth.se/vision/publdb/reports/pdf/enqvist-kahl-etal-wovcnnc-11.pdf">Large-scale 3D reconstruction of Örebro Castle</a>.</li>
+          <li><a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/sturm-bylow-etal-gcpr-13.pdf">CopyMe3D: Scanning and printing persons in 3D</a>.</li>
+        </ul>
+      </details>
     </td>
   </tr>
 </tbody></table>	
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research related stuff</heading>
-	      <p>
+            <td id="entrepreneurship" style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Entrepreneurship and industry</heading>
               <ul>
-				<li>
-  					<b>What would be Hilbert’s problems of AI?</b> We propose an initiative to identify the fundamental scientific questions that could help structure AI, much like Hilbert’s 23 problems shaped modern mathematics. The white paper is open for public comments and aims to lay the foundation for a long term research program in AI. Read it on <a href="https://openreview.net/forum?id=j9qvqDNQc0">OpenReview</a>.
-				</li>
-
-<li>
-  Recent work with my PhD student
-  <a href="https://bertaveira.github.io/">Bernardo Taveira</a>:
-  <br><br>
-
-  <a href="https://research.zenseact.com/publications/vorotracing/">
-    <video width="500"
-           poster="https://bertaveira.github.io/media/vorotracing.avif"
-           autoplay muted loop playsinline
-           style="max-width:100%; display:block; margin-bottom:6px;">
-      <source src="https://bertaveira.github.io/media/vorotracing.mp4"
-              type="video/mp4">
-    </video>
-  </a>
-  <a href="https://research.zenseact.com/publications/vorotracing/">
-    Differentiable Voronoi Ray Tracing Beyond Rasterization Speeds
-  </a>,
-  <i>arXiv preprint</i>, 2026.
-  <br><br>	
-
-  <a href="https://research.zenseact.com/publications/paragram/">
-    <video
-      width="500"
-      poster="https://bertaveira.github.io/media/paragram.avif"
-      autoplay muted loop playsinline
-      style="max-width:100%; display:block; margin-bottom:6px;">
-      <source src="https://bertaveira.github.io/media/paragram.webm"
-              type="video/webm">
-      <source src="https://bertaveira.github.io/media/paragram.mp4"
-              type="video/mp4">
-    </video>
-  </a>
-
-  <a href="https://research.zenseact.com/publications/paragram/">
-    Scalable GPU Construction of 3D Voronoi and Power Diagrams
-  </a>,
-  <i>SIGGRAPH 2026</i>.
-  <br><br>
-
-  <a href="https://research.zenseact.com/publications/R3D2/">
-    <video
-      width="500"
-      poster="https://bertaveira.github.io/media/r3d2.avif"
-      autoplay muted loop playsinline
-      style="max-width:100%; display:block; margin-bottom:6px;">
-      <source src="https://bertaveira.github.io/media/r3d2.webm"
-              type="video/webm">
-      <source src="https://bertaveira.github.io/media/r3d2.mp4"
-              type="video/mp4">
-    </video>
-  </a>
-
-  <a href="https://arxiv.org/abs/2506.07826">
-    R3D2: Realistic 3D Asset Insertion via Diffusion for Autonomous Driving Simulation
-  </a>,
-  <i>CVPR Workshop on Autonomous Driving</i>, 2026.
-</li>
-				  
-<li> GeM-NR: Geometry-Aware Multi-View Editing for Nonrigid Scene Changes, BMVC 2026. We show how to perform multi-view consistent image editing even when the edit changes the geometry of the scene. See the <a href="https://gem-nr.github.io/">project page</a>.
-
-<video width="500" autoplay muted loop playsinline controls style="display:block; margin-top:8px;">
-<source src="https://gem-nr.github.io/static/video/Video.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-</li>
-				  
-                <li> I am the main PI for the WASP-NEST project <a href="https://neural3d.github.io/">3D Scene Perception, Embeddings and Neural Rendering</a>. Collaborative research project with co-PIs <a href="https://kathlenkohn.github.io/">Kathlén Kohn</a> and <a href="https://www.kth.se/profile/celle/">Mårten Björkman</a> at KTH.</li>
-		<li> Interested in the visual localization problem? We are running a benchmark site: <a href="https://visuallocalization.net/">Visual Localization</a>. Try it out with your algorithm!</li>
-		<li> Interested in my mathematical ancestors and descendants? You can find them here at the <a href="http://genealogy.math.ndsu.nodak.edu/id.php?id=58941">Mathematics Genealogy Project</a>.</li>
-		<li> My Erd&ouml;s number is 4 via the path: Fredrik Kahl - Gunnar Sparr - Jaak Peetre - Svante Janson - Paul Erd&ouml;s.</li>
-		<li> ERC-project <a href="http://www.maths.lth.se/vision/research/globalvision.php">GlobalVision</a></B>, 2008-2013. <i>Starting Independent Research Grant</i>, funded by the European Research Council. </li>
-		<li> Learn more about 3D reconstruction form large-scale image sets and visit Örebro castle at the same time. For more info, read the <a href="http://www.maths.lth.se/vision/publdb/reports/pdf/enqvist-kahl-etal-wovcnnc-11.pdf">paper</a>. More reconstructions by <a href="http://www.maths.lth.se/matematiklth/personal/calle">Carl Olsson</a>.
-		<iframe frameborder="0" height="280" width="500" allowFullScreen webkitallowfullscreen="true" mozallowfullscreen="true" src="https://www.youtube.com/embed/i7ierVkXYa8"></iframe> </li>
-		<li> Want to scan yourself? Read our paper <a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/sturm-bylow-etal-gcpr-13.pdf">
-CopyMe3D: Scanning and printing persons in 3D</a>.
-<iframe frameborder="0" height="280" width="500" allowFullScreen webkitallowfullscreen="true" mozallowfullscreen="true" src="https://skfb.ly/64hg2ca?autostart=0&transparent=0&autospin=0&controls=1"></iframe>
-		</li>
+                <li>I am co-founder and board member of the computer vision consultancy <a href="https://www.eigenvision.se/">Eigenvision AB</a>. Turnover (2025): 14 MSEK.</li>
+                <li>I am co-founder and board member of the AI start-up <a href="https://taigatech.se/">Taigatech AB</a>. Turnover (2025): 23 MSEK.</li>
+                <li>Co-founder of <b>Cognimatics AB</b> (2003), acquired by <b>Axis Communications</b> in 2016.</li>
+                <li>Patent inventor and senior advisor to <b>Polar Rose AB</b>, acquired by <b>Apple</b> in 2010.</li>
+                <li>Patent inventor with <b>Zenseact</b> on 3D object detection, 2019.</li>
+                <li>Research collaborator to <b>Mapillary AB</b>, the crowd-sourced street-view platform founded by my former PhD students Jan-Erik Solem and Yubin Kuang, acquired by <b>Meta</b> in 2020.</li>
               </ul>
-              </p>
             </td>
           </tr>
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
+            <td id="publications" style="padding:20px;width:100%;vertical-align:middle">
               <heading>10 selected publications</heading>
-              <p>
               <ul>
-		<LI> <a href="https://arxiv.org/abs/2312.02152">Steerers: A framework for rotation equivariant keypoint descriptors</a>, G Bökman, J Edstedt, M Felsberg, F Kahl<br><i>Conference on Computer Vision and Pattern Recognition</i>, 2024.</LI>
-		<LI> <a href="https://arxiv.org/abs/2305.17017">Investigating how ReLU-networks encode symmetries</a>, G Bökman, F Kahl<br><i>Neural Information Processing Systems</i>, 2023.</LI>
-		<LI> <a href="http://www.maths.lth.se/matematiklth/personal/fredrik/toft_pami_2020.pdf">Long-Term Visual Localization Revisited</a><br> C Toft, W Maddern, A Torii, L Hammarstrand, 
-E Stenborg, M Okutomi, M Pollefeys, J Sivic, T Pajdla, F Kahl, T Sattler<br>
-<i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2021 </LI>
-		<LI> <a href="http://www.maths.lth.se/matematiklth/personal/calle/papers/eriksson-etal-tpami-2019.pdf">Rotation Averaging with the Chordal Distance:
-Global Minimizers and Strong Duality</a><br> A Eriksson, C Olsson, F Kahl, T-J Chin<br>
-<i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2021</LI>
-<LI> 
-<a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/enqvist-ask-etal-ijcv-14.pdf">
-Tractable algorithms for robust model estimation</a><br>
-O Enqvist, E Ask, F Kahl, K Åström<br>
-<i>International Journal of Computer Vision (IJCV)</i>, 2015 </LI>
-<LI> <a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/bylow_etal_rss2013.pdf">
-Real-time camera tracking and 3D reconstruction using signed distance functions</a><br>
-E Bylow, J Sturm, C Kerl, F Kahl, D Cremers<br>
-<i>Robotics: Science and Systems (RSS)</i>, 2013 </LI>
-<LI> <a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/kahl-strandmark-dam-12.pdf">
-Generalized roof duality</a><br> F Kahl, P Strandmark<br>
-<i>Discrete applied mathematics</i>, 2012 </LI>
-<LI> <a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/hartley-kahl-ijcv-09.pdf">
-Global optimization through rotation space search</a><br>
-R Hartley, F Kahl<br>
-<i>International Journal of Computer Vision</i>, 2009 </LI>
-<LI>
-<a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/kahl-hartley-pami-07.pdf">
-Multiple-view geometry under the <i>L<sub>&infin;</sub></i>-norm</a><br>
-F Kahl, R Hartley<br>
-<i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2008 </LI>
-<LI>
-<a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/hartley-kahl-ijcv-07.pdf">
-Critical configurations for projective reconstruction from multiple views</a><br>
-R Hartley, F Kahl<br>
-<i>International Journal of Computer Vision</i>, 2007 </LI>
-<!-- <LI>
-<a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/kahl-triggs-etal-jmiv-00.pdf">
-Critical motions for auto-calibration when some intrinsic parameters can vary</a><br>
-F Kahl, B Triggs, K Åström<br>
-<i>Journal of Mathematical Imaging and Vision</i>, 2000 </LI> -->
-		      
-	      </ul> 
-
-              </p>
+                <li><a href="https://arxiv.org/abs/2511.15706"><b>RoMa v2: Harder Better Faster Denser Feature Matching</b></a><br>J Edstedt, D Nordström, Y Zhang, G Bökman et al.<br><i>European Conference on Computer Vision (ECCV)</i>, 2026.</li>
+                <li><a href="https://arxiv.org/abs/2604.04931"><b>LoMa: Local Feature Matching Revisited</b></a><br>D Nordström, J Edstedt, G Bökman et al.<br><i>European Conference on Computer Vision (ECCV)</i>, 2026.</li>
+                <li><a href="https://arxiv.org/abs/2511.17309"><b>MuM: Multi-View Masked Image Modeling for 3D Vision</b></a><br>D Nordström, J Edstedt, F Kahl, G Bökman<br><i>Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2026.</li>
+                <li><a href="https://arxiv.org/abs/2505.15441"><b>Quick ViTs: Speeding up Vision Transformers through Equivariance</b></a><br>D Nordström, J Edstedt, F Kahl, G Bökman<br><i>European Conference on Computer Vision (ECCV)</i>, 2026.</li>
+                <li><a href="https://research.zenseact.com/publications/paragram/"><b>Scalable GPU Construction of 3D Voronoi and Power Diagrams</b></a><br>B Taveira, C Lindström, M Fatemi, L Hammarstrand, F Kahl<br><i>ACM SIGGRAPH Conference Papers</i>, 2026.</li>
+                <li><a href="https://arxiv.org/abs/2312.02152"><b>Steerers: A Framework for Rotation Equivariant Keypoint Descriptors</b></a><br>G Bökman, J Edstedt, M Felsberg, F Kahl<br><i>Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2024.</li>
+                <li><a href="http://www.maths.lth.se/matematiklth/personal/fredrik/toft_pami_2020.pdf"><b>Long-Term Visual Localization Revisited</b></a><br>C Toft, W Maddern, A Torii et al.<br><i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2021.</li>
+                <li><a href="http://www.maths.lth.se/matematiklth/personal/calle/papers/eriksson-etal-tpami-2019.pdf"><b>Rotation Averaging with the Chordal Distance: Global Minimizers and Strong Duality</b></a><br>A Eriksson, C Olsson, F Kahl, T-J Chin<br><i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2021.</li>
+                <li><a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/bylow_etal_rss2013.pdf"><b>Real-Time Camera Tracking and 3D Reconstruction Using Signed Distance Functions</b></a><br>E Bylow, J Sturm, C Kerl, F Kahl, D Cremers<br><i>Robotics: Science and Systems (RSS)</i>, 2013.</li>
+                <li><a href="http://www.maths.lth.se/matematiklth/vision/publdb/reports/pdf/hartley-kahl-ijcv-07.pdf"><b>Critical Configurations for Projective Reconstruction from Multiple Views</b></a><br>R Hartley, F Kahl<br><i>International Journal of Computer Vision</i>, 2007.</li>
+              </ul>
               <p>
                 For an up-to-date list of all my publications, please see my <a href="https://scholar.google.com/citations?user=P_w6UgMAAAAJ&hl=en">Google Scholar profile</a>.
               </p>
@@ -263,13 +227,13 @@ F Kahl, B Triggs, K Åström<br>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
+            <td id="students" style="padding:20px;width:100%;vertical-align:middle">
               <heading>Meet my PhD students</heading>
 	      <p>
               <ul>
 		<LI> <b>Karl Hammar</b>, Computer Vision Group, Chalmers University of Technology and SAAB AB.</LI>
 		<LI> <b>Vilgot Jansson</b>, Computer Vision Group, Chalmers University of Technology.</LI>
-		<LI> <a href="https://bertaveira.github.io/">Bernardo Taveiro</a>, Computer Vision Group, Chalmers University of Technology and Zenseact AB.</LI>
+		<LI> <a href="https://bertaveira.github.io/">Bernardo Taveira</a>, Computer Vision Group, Chalmers University of Technology and Zenseact AB.</LI>
 		<LI> <b>Tianyu Wu</b>, Computer Vision Group, Chalmers University of Technology and Zenseact AB.</LI>
 		<LI> <a href="https://www.davnords.com/">David Nordström</a>, Computer Vision Group, Chalmers University of Technology (co-supervised with Georg Bökman)</LI>
 		<LI> <b>Josef Bengtsson</b>, Computer Vision Group, Chalmers University of Technology</LI>
@@ -282,10 +246,10 @@ F Kahl, B Triggs, K Åström<br>
 		<LI> <b>Roman Naeem</b>, PhD 2026. </LI>
 		<LI> <b>Erik Wallin</b>, PhD 2026, SAAB AB. </LI>
 		<LI> <b>Kunal Chelani</b>, PhD 2025, Ericsson Research.</LI>
-		<LI> <b>Georg B&ouml;kman</b>, PhD 2024, postdoc at Unversity of Amsterdam.</LI>
+		<LI> <b>Georg B&ouml;kman</b>, PhD 2024, postdoc at University of Amsterdam.</LI>
 		<LI> <b>Pavlo Melnyk</b>, PhD 2024 from Linköping University.</LI>
 		<LI> <b>Lucas Brynte</b>, PhD 2024, Lucid Insights AB. </LI>
-		<LI> <b>Jos&eacute; Pedro Lopes Iglesias</b>, PhD 2023, Apple INC.</LI>
+		<LI> <b>Jos&eacute; Pedro Lopes Iglesias</b>, PhD 2023, Apple Inc.</LI>
 		<LI> <b>Fredrik Hellstr&ouml;m</b>, PhD 2023, postdoc at University College London.</LI>
 		<LI> <b>Carl Toft</b>, PhD 2021, <a href="https://www.eigenvision.se">Eigenvision AB</a>.</LI>
 		<LI> <b>M&aring;ns Larsson</b>, PhD 2020, <a href="https://www.eigenvision.se">Eigenvision AB</a>.</LI>
@@ -297,13 +261,13 @@ F Kahl, B Triggs, K Åström<br>
 		<LI> <b>Fangyuan Jiang</b>, PhD 2015, self-driving car company <a href="https://www.autox.ai/">AutoX Inc</a> in San Jose, California.</LI>
 		<LI> <b>Linus Sv&auml;rm</b>, PhD 2015, Kiwaro AB.</LI>
 		<LI> <b>Johannes Ul&eacute;n</b>, PhD 2014, <a href="https://www.eigenvision.se">Eigenvision AB</a>.</LI>
-		<LI> <b>Yubin Kuang</b>, PhD 2014,  co-founder of <a href="http://www.mapillary.com">Mapillary</a>, acquired by Facebook/Meta.</LI>
+		<LI> <b>Yubin Kuang</b>, PhD 2014,  co-founder of <a href="https://www.mapillary.com">Mapillary</a>, acquired by Facebook/Meta.</LI>
 		<LI> <b>Petter Strandmark</b>, PhD 2013, Apple Inc. </LI>
 		<LI> <b>Olof Enqvist</b>, PhD 2011, CEO and co-founder of <a href="https://www.eigenvision.se/">Eigenvision AB</a>. </LI>
 		<LI> <b>Martin Byr&ouml;d</b>, PhD 2010, Apple Inc. </LI>
 		<LI> <b>Klas Josephson</b>, PhD 2010, <a href="https://www.spiideo.com/">Spiideo AB</a> in Lund.
 		<LI> <a href="http://www.maths.lth.se/matematiklth/personal/calle/">Carl Olsson</a>, PhD 2009, Professor, Lund University.
-		<LI> <b>Jan-Erik Solem</b>, PhD 2006, CEO and co-founder of <a href="http://www.mapillary.com">Mapillary</a>, which was acquired by Facebook/Meta.
+		<LI> <b>Jan-Erik Solem</b>, PhD 2006, CEO and co-founder of <a href="https://www.mapillary.com">Mapillary</a>, which was acquired by Facebook/Meta.
 		<LI> <b>Nicolas Guilbert</b>, CEO and founder of <a href="http://ange.dk/">Ange Optimization Aps</a>. </LI>
 	      </ul>                
               </p>
@@ -336,7 +300,7 @@ F Kahl, B Triggs, K Åström<br>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
+            <td id="awards" style="padding:20px;width:100%;vertical-align:middle">
               <heading>Awards and recognition</heading>
 	      <p>
               <ul>
@@ -354,7 +318,7 @@ F Kahl, B Triggs, K Åström<br>
 		<li> We won the <b>Best Industry Paper</b> at the Swedish Symposium on Image Analysis, Luleå, 2024 for our work on <a href="https://arxiv.org/abs/2312.02152">Steerers</a> by Georg Bökman et al. </li>
 		<li> We won the <b>Best Paper Award</b> at <a href="https://brain.korea.ac.kr/icprai2024/">ICPRAI 2024</a> in Jeju Island, Korea! Read the <a href="https://arxiv.org/abs/2306.01344">paper</a>.</li>
 		<li> We won the <b>Best Industry Paper</b> at the Swedish Symposium on Image Analysis, Göteborg, 2019 for our work on <i>3D Object Detection</i> by Eskil Jörgensen, Christopher Zach and Fredrik Kahl.
-		     We get state-of-the-art results on monocular 3D object detection on Kitti! Read the <a href="https://arxiv.org/abs/1906.08070">paper</a>. More videos <a href="http://tinyurl.com/SS3D-YouTube">here</a>.<br>
+		     We get state-of-the-art results on monocular 3D object detection on KITTI! Read the <a href="https://arxiv.org/abs/1906.08070">paper</a>. More videos <a href="https://tinyurl.com/SS3D-YouTube">here</a>.<br>
 			<iframe width="700" height="300" src="https://www.youtube.com/embed/G3Aqhd5K2GE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </li>
 		<li> We won the <b>Best Industry Paper</b> at the Swedish Symposium on Image Analysis, Stockholm, 2018 for our work on <a href="https://visuallocalization.net/">Visual Localization</a> by Carl Toft et al. </li>
 		<li> The <b>Best Student Paper Award</b> is awarded to "Shape-Aware Multi-Atlas Segmentation" at ICPR 2016, Cancun, Mexico! Read the
@@ -408,7 +372,5 @@ F Kahl, B Triggs, K Åström<br>
 </body>
 
 </html>
-
-
 
 
