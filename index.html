@@ -1,14 +1,36 @@
 <!DOCTYPE HTML>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Fredrik Kahl</title>
+  <title>Fredrik Kahl – Computer Vision and Machine Learning</title>
   
   <meta name="author" content="Fredrik Kahl">
+  <meta name="description"
+        content="Fredrik Kahl is a professor of computer vision at Chalmers, working on 3D vision, geometric deep learning, feature matching and visual localization.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <style>
     html { scroll-behavior: smooth; }
+    h1 {
+      font-family:'Lato', Verdana, Helvetica, sans-serif;
+      font-size:32px;
+      font-weight:400;
+      text-align:center;
+      margin:0 0 14px;
+    }
+    h2 {
+      font-family:'Lato', Verdana, Helvetica, sans-serif;
+      font-size:22px;
+      font-weight:400;
+      margin:0 0 12px;
+    }
+    img, iframe { max-width:100%; }
+    iframe {
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:16 / 9;
+    }
     .section-nav { text-align:center; margin:14px 0 4px; line-height:1.8; }
     .section-nav a { white-space:nowrap; }
     .research-grid {
@@ -36,6 +58,20 @@
     details summary { cursor:pointer; color:#1772d0; }
     @media (max-width:650px) {
       .research-grid { grid-template-columns:1fr; }
+      .profile-table,
+      .profile-table tbody,
+      .profile-table tr,
+      .profile-table td {
+        display:block;
+        width:100% !important;
+        max-width:none !important;
+        box-sizing:border-box;
+      }
+      .profile-photo {
+        width:70% !important;
+        max-width:260px !important;
+        margin:0 auto;
+      }
     }
   </style>
 </head>
@@ -44,15 +80,13 @@
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="profile-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Fredrik Kahl</name>
-              </p>
+              <h1>Fredrik Kahl</h1>
 <p>
 I am a professor at <a href="https://www.chalmers.se/">Chalmers University of Technology</a> leading the <b>Computer Vision Group</b>.
-	In 2026-2028 I will also be a <a href="https://www.hi-paris.fr/" style="color: red;">Hi!Paris</a> Visiting Chair at the <a href="https://imagine-lab.enpc.fr/">IMAGINE</a> research group, Ecole des Ponts ParisTech.
+	In 2026-2028 I will also be a <a href="https://www.hi-paris.fr/" style="color: red;">Hi!Paris</a> Visiting Chair at the <a href="https://imagine-lab.enpc.fr/">IMAGINE</a> research group, École des Ponts ParisTech.
 My research focuses on geometric deep learning and 3D scene understanding, with core problems in 3D reconstruction, correspondences and visual localization with an emphasis on symmetry, equivariance and scalable learning.
 Current interests include generative models and applications in medical image analysis.
 </p>
@@ -77,8 +111,8 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
                 <a href="#entrepreneurship">Entrepreneurship</a>
               </nav>
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="kahlf.webp"><img style="width:100%;max-width:100%" src="kahlf.webp" class="hoverZoomLink"></a>
+            <td class="profile-photo" style="padding:2.5%;width:40%;max-width:40%">
+              <a href="kahlf.webp"><img style="width:100%;max-width:100%" src="kahlf.webp" class="hoverZoomLink" alt="Fredrik Kahl"></a>
             </td>
           </tr>
         </tbody></table>
@@ -86,7 +120,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>News</heading>
+              <h2>News</h2>
               <ul>
                 <li><b>Aug 2026.</b> <b>VoroTracing</b>, our differentiable Voronoi ray tracer for novel-view synthesis, is out as a preprint with <a href="https://research.zenseact.com/publications/vorotracing/">project page</a>, <a href="https://arxiv.org/abs/2608.17682">paper</a>, and <a href="https://github.com/zenseact/VoroTracing">code</a>.</li>
                 <li><b>May 2026.</b> <a href="https://research.zenseact.com/publications/paragram/">Scalable GPU Construction of 3D Voronoi and Power Diagrams</a> was accepted to <a href="https://s2026.siggraph.org/">SIGGRAPH 2026</a>.</li>
@@ -112,7 +146,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
     <td id="research" style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Selected research and projects</heading>
+      <h2>Selected research and projects</h2>
 
       <div class="research-grid">
         <article class="research-card">
@@ -188,7 +222,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td id="entrepreneurship" style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Entrepreneurship and industry</heading>
+              <h2>Entrepreneurship and industry</h2>
               <ul>
                 <li>I am co-founder and board member of the computer vision consultancy <a href="https://www.eigenvision.se/">Eigenvision AB</a>. Turnover (2025): 14 MSEK.</li>
                 <li>I am co-founder and board member of the AI start-up <a href="https://taigatech.se/">Taigatech AB</a>. Turnover (2025): 23 MSEK.</li>
@@ -204,7 +238,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td id="publications" style="padding:20px;width:100%;vertical-align:middle">
-              <heading>10 selected publications</heading>
+              <h2>10 selected publications</h2>
               <ul>
                 <li><a href="https://arxiv.org/abs/2511.15706"><b>RoMa v2: Harder Better Faster Denser Feature Matching</b></a><br>J Edstedt, D Nordström, Y Zhang, G Bökman et al.<br><i>European Conference on Computer Vision (ECCV)</i>, 2026.</li>
                 <li><a href="https://arxiv.org/abs/2604.04931"><b>LoMa: Local Feature Matching Revisited</b></a><br>D Nordström, J Edstedt, G Bökman et al.<br><i>European Conference on Computer Vision (ECCV)</i>, 2026.</li>
@@ -227,8 +261,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td id="students" style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Meet my PhD students</heading>
-	      <p>
+              <h2>Meet my PhD students</h2>
               <ul>
 		<LI> <b>Karl Hammar</b>, Computer Vision Group, Chalmers University of Technology and SAAB AB.</LI>
 		<LI> <b>Vilgot Jansson</b>, Computer Vision Group, Chalmers University of Technology.</LI>
@@ -238,9 +271,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 		<LI> <b>Josef Bengtsson</b>, Computer Vision Group, Chalmers University of Technology</LI>
 		<LI> <b>David Hagerman Olzon</b>, Signal Processing Group, Chalmers University of Technology (co-supervised with Lennart Svensson)</LI>
 	      </ul>
-	      </p>
-	      <p>
-		Former PhD students:
+	      <p>Former PhD students:</p>
 	      <ul>
 		<LI> <b>Roman Naeem</b>, PhD 2026. </LI>
 		<LI> <b>Erik Wallin</b>, PhD 2026, SAAB AB. </LI>
@@ -257,19 +288,18 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 		<LI> <b>Erik Bylow</b>, PhD 2018, Qualcomm Inc.</LI>
 		<LI> <b>Johan Fredriksson</b>, PhD 2016, Apple Inc. </LI>
 		<LI> <b>Matilda Landgren</b>, PhD 2016, Cross Technology Solutions AB. </LI>
-		<LI> <b>Fangyuan Jiang</b>, PhD 2015, self-driving car company <a href="https://www.autox.ai/">AutoX Inc</a> in San Jose, California.</LI>
+		<LI> <b>Fangyuan Jiang</b>, PhD 2015, self-driving car company <a href="https://www.autox.ai/">AutoX Inc.</a> in San Jose, California.</LI>
 		<LI> <b>Linus Sv&auml;rm</b>, PhD 2015, Kiwaro AB.</LI>
 		<LI> <b>Johannes Ul&eacute;n</b>, PhD 2014, <a href="https://www.eigenvision.se">Eigenvision AB</a>.</LI>
 		<LI> <b>Yubin Kuang</b>, PhD 2014,  co-founder of <a href="https://www.mapillary.com">Mapillary</a>, acquired by Facebook/Meta.</LI>
 		<LI> <b>Petter Strandmark</b>, PhD 2013, Apple Inc. </LI>
 		<LI> <b>Olof Enqvist</b>, PhD 2011, CEO and co-founder of <a href="https://www.eigenvision.se/">Eigenvision AB</a>. </LI>
 		<LI> <b>Martin Byr&ouml;d</b>, PhD 2010, Apple Inc. </LI>
-		<LI> <b>Klas Josephson</b>, PhD 2010, <a href="https://www.spiideo.com/">Spiideo AB</a> in Lund.
-		<LI> <a href="http://www.maths.lth.se/matematiklth/personal/calle/">Carl Olsson</a>, PhD 2009, Professor, Lund University.
-		<LI> <b>Jan-Erik Solem</b>, PhD 2006, CEO and co-founder of <a href="https://www.mapillary.com">Mapillary</a>, which was acquired by Facebook/Meta.
-		<LI> <b>Nicolas Guilbert</b>, CEO and founder of <a href="http://ange.dk/">Ange Optimization Aps</a>. </LI>
+		<LI> <b>Klas Josephson</b>, PhD 2010, <a href="https://www.spiideo.com/">Spiideo AB</a> in Lund.</LI>
+		<LI> <a href="http://www.maths.lth.se/matematiklth/personal/calle/">Carl Olsson</a>, PhD 2009, Professor, Lund University.</LI>
+		<LI> <b>Jan-Erik Solem</b>, PhD 2006, CEO and co-founder of <a href="https://www.mapillary.com">Mapillary</a>, which was acquired by Facebook/Meta.</LI>
+		<LI> <b>Nicolas Guilbert</b>, CEO and founder of <a href="http://ange.dk/">Ange Optimization ApS</a>. </LI>
 	      </ul>                
-              </p>
             </td>
           </tr>
         </tbody></table>
@@ -280,8 +310,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>In the news</heading>
-	      <p>
+              <h2>In the news</h2>
               <ul>
 				  <li>Article about detecting deepfakes in <a href="https://www.expressen.se/ekonomi/tech/sa-avslojar-du-en-ai-genererad-bild/">Expressen</a> where I am the expert!</li>
                 <li> I am an expert at SVT Nyheter (Swedish television): <a href="https://www.svt.se/nyheter/vetenskap/hanat-filmgrepp-far-upprattelse-med-ny-teknik">Hånat filmgrepp får upprättelse med ny teknik</a>.</li>
@@ -290,9 +319,8 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 		<li> <a href="https://www.forskning.se/2018/05/02/algoritmen-varnar-innan-hjartinfarkten-ar-ett-faktum/">Algoritmen varnar innan hj&auml;rtinfarkten &auml;r ett faktum</a> in <b>forskning.se</b> with my former PhD student Jennifer Alv&eacute;n.</li>
 		<li> Jan-Erik Solem's and my patent which was acquired by Apple reaches the <a href="http://9to5mac.com/2011/11/22/apple-patent-details-advanced-3d-object-recognition-and-verification-technology/">news tabloids</a>! </li>
 		<li> We are featured in <a href="https://www.sydsvenskan.se/2010-10-02/matematiker-med-oga-for-affarer">Sydsvenskan</a>!</li>
-		<li> Read about my ERC-project in <a href="http://www.svd.se/nyheter/inrikes/artikel_689557.svd">Svenska Dagbladet</a>.
+		<li> Read about my ERC-project in <a href="http://www.svd.se/nyheter/inrikes/artikel_689557.svd">Svenska Dagbladet</a>.</li>
               </ul>
-              </p>
             </td>
           </tr>
         </tbody></table>
@@ -300,11 +328,10 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td id="awards" style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Awards and recognition</heading>
-	      <p>
+              <h2>Awards and recognition</h2>
               <ul>
 		<li> We won the <b>Best Industry Paper</b> at the Swedish Symposium on Image Analysis, Örebro, 2026 for our work on <a href="https://arxiv.org/abs/2511.15706">dense matching</a> by Johan Edstedt, David Nordström et al. </li>
-                <li> Several of my PhD students have received the bi-annual <a href="https://en.wikipedia.org/wiki/Scandinavian_Conference_on_Image_Analysis#Best_Nordic_thesis_awards">Best Nordic Thesis Award</a>
+                <li> Several of my PhD students have received the biennial <a href="https://en.wikipedia.org/wiki/Scandinavian_Conference_on_Image_Analysis#Best_Nordic_thesis_awards">Best Nordic Thesis Award</a>
 		     which I consider to be my top achievement!
               		<ul>
 			<li> <b>Jennifer Alv&eacute;n</b>, Best Swedish Thesis Award 2019-2020: <i>Combining Shape and Learning for Medical Image Analysis</i>. Footnote: Nordic version canceled due to Covid-19 pandemic.</li>
@@ -324,7 +351,6 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 <a href="http://www.maths.lth.se/vision/publdb/reports/pdf/alven-kahl-etal-icpr-16.pdf">paper</a>.</li>
 		<li> I received the <a href="https://link.springer.com/content/pdf/10.1007/s11263-007-0040-5.pdf">Marr Prize</a> in 2005, which is considered to be one of the most prestigious prizes in computer vision. </li>
               </ul>
-              </p>
             </td>
           </tr>
         </tbody></table>
@@ -333,8 +359,7 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Miscellaneous</heading>
-	      <p>
+              <h2>Miscellaneous</h2>
               <ul>
                 <li>I worked in the Management Group of CHAIR - Chalmers AI Research Centre, <a href="https://www.chalmers.se/en/centres/chair/">CHAIR</a>, 2019-2021.</li>
                 <li>I was on Program Management Group of <a href="http://wasp-sweden.org/ai/">WASP-AI</a>, 2018-2020.</li>
@@ -350,7 +375,6 @@ Previously, I was a professor at Lund University (2006–2018) and a postdoctora
 		<li> <a href="http://www2.imm.dtu.dk/projects/OCVschool/">Optimization in Computer Vision</a>. A one week PhD School, 19-23 May 2008 in Copenhagen, Denmark. Co-organized with Henrik Aanaes, DTU. Lectures include Prof. Richard Hartley, Phil Torr and Lieven Vanderberge.</li>
 		<li>Want to see research in the making? <a href="http://www.maths.lth.se/matematiklth/personal/fredrik/Fredrik_tavla.JPG"><img src="Fredrik_tavla.JPG" alt="Continuous cuts black board" align="bottom" width="300"></a>.</li>
               </ul>
-              </p>
             </td>
           </tr>
         </tbody></table>
